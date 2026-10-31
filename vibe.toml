@@ -1,0 +1,213 @@
+[package]
+name = "mingw-w64"
+group = "org.vibevm.apps"
+kind = "app"
+version = "15.2.0"
+epoch = 1
+format = "normal"
+authors = ["Oleg Chirukhin"]
+license = "UPL-1.0"
+description = "The MinGW-w64 GCC toolchain for Windows (winlibs build), installed as a portable Vibe application"
+keywords = ["mingw", "gcc", "toolchain", "windows", "application"]
+
+[compatibility]
+min_vibe_version = "1.0.8"
+requires_kinds = []
+
+[application]
+id = "mingw-w64"
+
+[[installer_options]]
+id = "windows-x64"
+name = "winlibs GCC 15.2.0 (UCRT, POSIX threads, SEH)"
+platform = "windows"
+platform_name = "Windows"
+arch = "x86_64"
+arch_name = "Intel/AMD 64-bit"
+
+[[installer_options.steps]]
+id = "archive"
+title = "Download and unpack the winlibs MinGW-w64 build"
+kind = "archive"
+format = "zip"
+source = "https://github.com/brechtsanders/winlibs_mingw/releases/download/15.2.0posix-13.0.0-ucrt-r2/winlibs-x86_64-posix-seh-gcc-15.2.0-mingw-w64ucrt-13.0.0-r2.zip"
+sha256 = "3b86551fb163859f805145e5c1b0d4a48324654b99863bef7da5af6d9fc9d813"
+payload_root = "mingw64"
+needs = ["network"]
+
+[[installer_options.launchers]]
+id = "gcc"
+name = "gcc"
+description = "GNU C compiler"
+executable = "bin/gcc.exe"
+terminal = true
+default = true
+
+[[installer_options.launchers]]
+id = "gxx"
+name = "g++"
+description = "GNU C++ compiler"
+executable = "bin/g++.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "cxx"
+name = "c++"
+description = "GNU C++ compiler (alias)"
+executable = "bin/c++.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "cpp"
+name = "cpp"
+description = "C preprocessor"
+executable = "bin/cpp.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "ar"
+name = "ar"
+description = "archiver"
+executable = "bin/ar.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "as"
+name = "as"
+description = "assembler"
+executable = "bin/as.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "ld"
+name = "ld"
+description = "linker"
+executable = "bin/ld.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "nm"
+name = "nm"
+description = "symbol lister"
+executable = "bin/nm.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "objcopy"
+name = "objcopy"
+description = "object copier"
+executable = "bin/objcopy.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "objdump"
+name = "objdump"
+description = "object dumper"
+executable = "bin/objdump.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "ranlib"
+name = "ranlib"
+description = "archive indexer"
+executable = "bin/ranlib.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "strip"
+name = "strip"
+description = "symbol stripper"
+executable = "bin/strip.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "windres"
+name = "windres"
+description = "resource compiler"
+executable = "bin/windres.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "dlltool"
+name = "dlltool"
+description = "DLL import library tool"
+executable = "bin/dlltool.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "gdb"
+name = "gdb"
+description = "GNU debugger"
+executable = "bin/gdb.exe"
+terminal = true
+
+[[installer_options.launchers]]
+id = "mingw32-make"
+name = "mingw32-make"
+description = "GNU Make"
+executable = "bin/mingw32-make.exe"
+terminal = true
+
+[[installer_options.public_commands]]
+name = "gcc"
+launcher = "gcc"
+
+[[installer_options.public_commands]]
+name = "g++"
+launcher = "gxx"
+
+[[installer_options.public_commands]]
+name = "c++"
+launcher = "cxx"
+
+[[installer_options.public_commands]]
+name = "cpp"
+launcher = "cpp"
+
+[[installer_options.public_commands]]
+name = "ar"
+launcher = "ar"
+
+[[installer_options.public_commands]]
+name = "as"
+launcher = "as"
+
+[[installer_options.public_commands]]
+name = "ld"
+launcher = "ld"
+
+[[installer_options.public_commands]]
+name = "nm"
+launcher = "nm"
+
+[[installer_options.public_commands]]
+name = "objcopy"
+launcher = "objcopy"
+
+[[installer_options.public_commands]]
+name = "objdump"
+launcher = "objdump"
+
+[[installer_options.public_commands]]
+name = "ranlib"
+launcher = "ranlib"
+
+[[installer_options.public_commands]]
+name = "strip"
+launcher = "strip"
+
+[[installer_options.public_commands]]
+name = "windres"
+launcher = "windres"
+
+[[installer_options.public_commands]]
+name = "dlltool"
+launcher = "dlltool"
+
+[[installer_options.public_commands]]
+name = "gdb"
+launcher = "gdb"
+
+[[installer_options.public_commands]]
+name = "mingw32-make"
+launcher = "mingw32-make"
