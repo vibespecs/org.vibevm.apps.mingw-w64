@@ -2,7 +2,7 @@
 name = "mingw-w64"
 group = "org.vibevm.apps"
 kind = "app"
-version = "15.2.0"
+version = "15.2.1"
 epoch = 1
 format = "normal"
 authors = ["Oleg Chirukhin"]
@@ -40,7 +40,7 @@ id = "gcc"
 name = "gcc"
 description = "GNU C compiler"
 executable = "bin/gcc.exe"
-terminal = true
+kind = "command"
 default = true
 
 [[installer_options.launchers]]
@@ -48,105 +48,105 @@ id = "gxx"
 name = "g++"
 description = "GNU C++ compiler"
 executable = "bin/g++.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "cxx"
 name = "c++"
 description = "GNU C++ compiler (alias)"
 executable = "bin/c++.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "cpp"
 name = "cpp"
 description = "C preprocessor"
 executable = "bin/cpp.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "ar"
 name = "ar"
 description = "archiver"
 executable = "bin/ar.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "as"
 name = "as"
 description = "assembler"
 executable = "bin/as.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "ld"
 name = "ld"
 description = "linker"
 executable = "bin/ld.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "nm"
 name = "nm"
 description = "symbol lister"
 executable = "bin/nm.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "objcopy"
 name = "objcopy"
 description = "object copier"
 executable = "bin/objcopy.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "objdump"
 name = "objdump"
 description = "object dumper"
 executable = "bin/objdump.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "ranlib"
 name = "ranlib"
 description = "archive indexer"
 executable = "bin/ranlib.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "strip"
 name = "strip"
 description = "symbol stripper"
 executable = "bin/strip.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "windres"
 name = "windres"
 description = "resource compiler"
 executable = "bin/windres.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "dlltool"
 name = "dlltool"
 description = "DLL import library tool"
 executable = "bin/dlltool.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "gdb"
 name = "gdb"
 description = "GNU debugger"
 executable = "bin/gdb.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.launchers]]
 id = "mingw32-make"
 name = "mingw32-make"
 description = "GNU Make"
 executable = "bin/mingw32-make.exe"
-terminal = true
+kind = "command"
 
 [[installer_options.public_commands]]
 name = "gcc"
